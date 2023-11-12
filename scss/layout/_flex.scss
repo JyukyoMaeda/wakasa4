@@ -1,0 +1,592 @@
+// flex関係（コンテンツの横並び）
+.l-flex--area{
+	// height: 100%;
+	.l-flex--contents{
+		.flexItem{
+			&.-noPD{
+				padding: 0 !important;
+			}
+			&.-noPD_r{
+				padding-right: 0 !important;
+			}
+			&.-noPD_l{
+				padding-left: 0 !important;
+			}
+			// pcのみ
+			&.-noPD_pc{
+				@include mq(tb){
+					padding: 0 !important;
+				}
+			}
+			&.-noPD_r_pc{
+				@include mq(tb){
+					padding-right: 0 !important;
+				}
+			}
+			&.-noPD_l_pc{
+				@include mq(tb){
+					padding-left: 0 !important;
+				}
+			}
+			// spのみ
+			&.-noPD_s{
+				@include mq(sp){
+					padding: 0 !important;
+				}
+			}
+			&.-noPD_r_s{
+				@include mq(sp){
+					padding-right: 0 !important;
+				}
+			}
+			&.-noPD_l_s{
+				@include mq(sp){
+					padding-left: 0 !important;
+				}
+			}
+			&.-youtubeBox{
+				padding: 0 5vw;
+				@include mq(tb){
+					padding: 0 1.5vw;
+				}
+				&.-left{
+					@include mq(tb){
+						padding: 0 1.5vw 0 0;
+					}
+				}
+				&.-right{
+					@include mq(tb){
+						padding: 0 0 0 1.5vw;
+					}
+				}
+			}
+		}
+		// header
+		
+		&.-header-top{
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+			padding: 1vh 2.5vw 1.5vh;
+			@include mq(sp){
+				justify-content: center;
+			}
+			@include mq(tb){
+				justify-content: center;
+				padding: 1.5vh 0 2vh;
+				// padding: 1.5vh 0 0;
+			}
+			.flexItem{
+				&.-logoArea{
+					width: 36%;
+					@include mq(tb){
+						position: relative;
+						width: 12%;
+						height: 100%;
+						margin-left: auto;
+						a{
+							display: block;
+							&::after{
+								content: "";
+								position: absolute;
+								top: 50%;
+								left: 50%;
+								transform: translate(-50%, -50%);
+								width: 100%;
+								height: auto;
+								background-image: url(/images/SVG/logo_new02.svg);
+							}
+						}
+					}
+				}
+				&.-center-contentsArea{
+					span{
+						width: auto;
+					}
+					@include mq(sp){
+						width: 60%;
+    					padding-left: 3vw;
+					}
+					@include mq(tb){
+						width: calc(55%);
+						padding: 0;
+					}
+					@include mq(pc){
+						width: 60%;
+						margin: auto;
+						// margin:auto 0.7% auto auto;
+					}
+				}
+				&.-right-contactArea{
+					width: calc(20%);
+					margin-right: auto;
+					p{
+						margin-top: .5vh;
+					}
+					.red-text{
+						@include mq(tb){
+							padding: 0 2vw;
+						}
+					}
+				}
+				&.-textArea{
+					@include mq(tb){
+						width: 65%;
+						padding-right: 4%;
+					}
+					@include mq(pc){
+						width: 60%;
+						padding-right: 1%;
+					}
+				}
+				&.-timeArea{
+					width: 95%;
+					@include mq(sp){
+						// margin-top: .2vh;
+					}
+					@include mq(tb){
+						width: 33%;
+					}
+					@include mq(tb-pc1000){
+						width: 37%;
+					}
+					@include mq(tb-pc1400){
+						width: 37%;
+					}
+					@include mq(pc){
+						width: 26%;
+					}
+				}
+
+			}
+		}
+		&.-header-c-inner{
+			display: flex;
+			flex-wrap: nowrap;
+			justify-content: space-between;
+			align-items: center;
+			.flexItem{
+				width: 100%;
+				@include mq(tb){
+					width: 49%;
+				}
+			}
+			&.-v02{
+				.flexItem{
+					width: 100%;
+					@include mq(tb){
+						width: 100%;
+						padding: 0 1vw;
+					}
+				}
+			}
+		}
+		&.-header-contactArea{
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: center;
+			border: 1px solid black;
+			.flexItem{
+				width: 50%;
+				a{
+					display: block;
+					width: 100%;
+					height: 100%;
+					transition: .5s all;
+					span{
+						padding: 1vh 0 2.8vh;
+					}
+					&:hover{
+						transform: scale(1.1);
+					}
+				}
+			}
+		}
+
+		// TOP > 駅周辺
+		&.-stationLists{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-between;
+			}
+			.flexItem{
+				width: 100%;
+				padding: 0;
+				@include mq(tb){
+						width: 100/3;
+						padding: 0 1%;
+				}
+				&.-stationLogo{
+					position: relative;
+					&.-a{
+						&::after{
+							@include mq(tb){
+								content: "";
+								display: inline-block;
+								background-image: url(../images/logo/SVG/station-logo01.svg);
+								background-size: cover;
+								width: 58%;
+								height: 20%;
+								position: absolute;
+								top: -3%;
+								left: -10%;
+							}
+						}
+					}
+					&.-b{
+						&::after{
+							@include mq(tb){
+								content: "";
+								display: inline-block;
+								background-image: url(../images/logo/SVG/station-logo02.svg);
+								background-size: cover;
+								width: 58%;
+								height: 20%;
+								position: absolute;
+								top: -3%;
+								left: -10%;
+							}
+						}
+					}
+					&.-c{
+						&::after{
+							@include mq(tb){
+								content: "";
+								display: inline-block;
+								background-image: url(../images/logo/SVG/station-logo03.svg);
+								background-size: cover;
+								width: 29%;
+								height: 14%;
+								position: absolute;
+								top: -3%;
+								left: -5%;
+							}
+						}
+					}
+				}
+			}
+		}
+		&.-youtubeLists{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-between;
+			}
+			.flexItem{
+				width: 100%;
+				padding: 0;
+				@include mq(tb){
+						width: 100/2;
+						padding: 0 1%;
+				}
+			}
+		}
+
+
+
+		// スマホ時 > 順番逆
+		&.-reverse_s{
+			@include mq(sp){
+				.flexItem{
+					&:nth-child(1){
+						order: 2;
+					}
+					&:nth-child(2){
+						order: 1;
+					}
+				}
+			}
+		}
+		&.-titleArea{
+			display: flex;
+			flex-wrap: nowrap;
+			width: 100%;
+			height: 100%;
+
+			.flexItem{
+				width: 80%;
+				height: 100%;
+					&:nth-child(1){
+						@include mq(tb){
+							width: 53%;
+						}
+					}
+					&:nth-child(2){
+						@include mq(tb){
+							width: 47%;
+						}
+					}
+			}
+		}
+		&.-tel{//電話番号エリア
+			display: flex;
+			flex-wrap: nowrap;
+			width: 300px;
+            margin: auto;
+			align-items: center;
+			justify-content: center;
+			@media screen and (min-width: 767px){
+				width: 1000px;
+			}
+			.flexItem{
+				&:first-child{// 電話ロゴ
+					padding-right:5px;
+					svg{
+						width: 25px;
+						@media screen and (min-width: 767px){
+							width: 34px;
+						}
+					}
+				}
+				&:last-child{// 電話番号
+					width: auto;
+					padding-left: 5px;
+					@media screen and (min-width: 767px){
+					}
+				}
+			}
+		}
+		// お問い合わせについては、「scss/layout/_contact.scss」に記述することにする。
+		&.-tab-box{
+			width: 90vw;
+			margin: auto;
+			@include mq(tb){
+				display: flex;
+				flex-wrap: wrap;
+				justify-content: space-evenly;
+				width: 80vw;
+				max-width: 1170px;
+			}
+			.flexItem{
+				@include mq(sp){
+					width: 90%;
+					margin: 0 auto 10px;
+				}
+				@include mq(tb){
+					width: calc(50% - 10px);
+					margin: 5px;
+				}
+			}
+		}
+
+
+
+
+		&.-columnBox{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			@include mq(tb){
+				flex-wrap: nowrap;
+				align-items: flex-start;
+				justify-content: space-around;
+			}
+			.flexItem{
+				width: 100%;
+				padding: 0 5%;
+				@include mq(tb){
+					width: 50%;
+					padding: 0 2%;
+				}
+			}
+			&.-w_7-3{
+				@include mq(tb){
+					.flexItem{
+						&.-textArea{
+							width: 70%;
+						}
+						&.-picArea{
+							width: 30%;
+						}
+					}
+				}
+			}
+		}
+		&.-columnBox02{
+				display: flex;
+				flex-wrap: nowrap;
+				align-items: flex-start;
+				justify-content: space-around;
+				.flexItem{
+					width: 100%;
+					padding: 0 2%;
+					@include mq(tb){
+						width: 50%;
+						padding: 0 2%;
+					}
+					&.-left_nav{
+						@include mq(tb){
+							width: 16.66666vw;
+							height: 100%;
+							background: $side-nav;
+						}
+					} 
+					&.-right_contents{
+						@include mq(tb){
+							width: calc(100% - 16.66666vw);
+							height: 100%;
+						}
+					}
+				}
+		}
+		&.-columnBox03{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			@include mq(tb){
+				justify-content: space-around;
+			}
+			.flexItem{
+				width: 100%;
+				padding: 0 3%;
+				@include mq(tb){
+					width: 33.3333%;
+					padding: 0 2%;
+					&:nth-child(1),
+					&:nth-child(4)
+					{
+						padding: 0 4% 0 0;
+					}
+					&:nth-child(3),
+					&:nth-child(6)
+					{
+						padding: 0 0 0 4%;
+					}
+				}
+			}
+		}
+		&.-columnBox04{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-around;
+			}
+			&.-pc-wrap{
+				@include mq(tb){
+					flex-wrap: wrap;
+				}
+			}
+			.flexItem{
+				width: 50%;
+				padding: 0 2%;
+				@include mq(tb){
+					width: 25%;
+					padding: 0 1%;
+				}
+			}
+		}
+		&.-columnBox05{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-around;
+			}
+			&.-pc-wrap{
+				@include mq(tb){
+					flex-wrap: wrap;
+				}
+			}
+			.flexItem{
+				width: 50%;
+				padding: 0 2%;
+				@include mq(tb){
+					width: 25%;
+					padding: 0 2%;
+				}
+			}
+		}
+		&.-columnBox_sp{//spのみ > flex
+			display: flex;
+			flex-wrap: nowrap;
+			align-items: flex-end;
+			@include mq(tb){
+				flex-wrap: wrap;
+				align-items: flex-start;
+				justify-content: space-around;
+			}
+			.flexItem{
+				width: 50%;
+				padding: 0 5%;
+				@include mq(tb){
+					width: 100%;
+					padding: 0 2%;
+				}
+			}
+		}
+
+		&.-gaiyo-2_1{
+			display: flex;
+			flex-wrap: wrap;
+			align-items:center;
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-around;
+				align-items: flex-start;
+			}
+			.flexItem{
+				&:nth-child(1){
+					width: 60%;
+					padding: 0 2%;
+					margin: auto;
+					@include mq(tb){
+						width: 55%;
+						padding: 0 2%;
+					}
+				}
+				&:nth-child(2){
+					width: 60%;
+					padding: 0 2%;
+					margin: auto;
+					@include mq(tb){
+						width: 30%;
+						padding: 0 2%;
+					}
+				}
+
+			}
+		}
+		&.-gaiyo{
+			display: flex;
+			flex-wrap: wrap;
+			align-items: flex-start;
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-around;
+			}
+			.flexItem{
+				width: 100% !important;
+				@include mq(tb){
+					width: 50% !important;
+					padding: 0 2%;
+				}
+		}
+		}
+
+	}
+}
+
+.-s-location{
+	@media screen and (min-width: 768px){
+		width: 95%;
+		max-width: 1260px;
+		height: auto;
+		margin: auto;
+	}
+	.thumbnail{
+		.swiper-wrapper{
+			flex-wrap: wrap;
+			@media screen and (min-width: 768px){
+				flex-wrap: wrap;
+			}
+		}
+	}
+}

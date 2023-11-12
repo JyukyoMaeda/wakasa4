@@ -1,0 +1,116 @@
+.l-tabs--area{
+    border: 1px solid #707070;
+    margin: auto;
+    text-align: center;
+
+
+    .tab-item{
+        display: inline-block;
+        // width: 49.2%;
+        width: calc((100% - 11px) / 3);
+        line-height: 2;
+        color: #707070;
+        background: #ffffff;
+        text-align: center;
+        transition: all .3s ease;
+        &:hover{
+            color: #ffffff;
+            background: #B9B9B9;
+        }
+        @include mq(tb){
+            // width: 49.68%;
+            width: calc((100% - 11px) / 3);
+            padding-top: 4px;
+            line-height: 2.3;
+        }
+    }
+
+
+    input[name="tab-item01"],
+    input[name="tab-item02"],
+    input[name="tab-item03"],
+    input[name="tab-item17"] {
+        display: none;
+    }
+    .tab-content {
+        // z-index: -1;
+        display: none;
+        margin: auto;
+        border-top: 1px solid #707070;
+        clear: both;
+        opacity: 0;
+        overflow: hidden;
+        @media screen and (min-width: 767px){
+
+        }
+        &.-tabInSlider{
+            position: absolute;
+            top: 0;
+            display: block;
+            height: 100%;
+            opacity: 0;
+            z-index: -1;
+        }
+        .tab-content-img{
+            img{
+                width: 100%;
+                height: auto;
+            }
+        }
+    }
+
+    #b01:checked ~ #b01-content,
+    #b02:checked ~ #b02-content,
+    #b03:checked ~ #b03-content,
+    #b17:checked ~ #b17-content {
+        position: inherit;
+        display: block !important;
+        z-index: 1;
+        opacity: 1;
+        transition: all 1s ease;
+    }
+
+
+
+    #g01:checked ~ #g01-content,
+    #n01:checked ~ #n01-content,
+    #m01:checked ~ #m01-content {
+        position: inherit;
+        display: block !important;
+        z-index: 1;
+        opacity: 1;
+        transition: all 1s ease;
+    }
+    #g02:checked ~ #g02-content,
+    #n02:checked ~ #n02-content,
+    #m02:checked ~ #m02-content {
+        position: inherit;
+        display: block !important;
+        z-index: 1;
+        opacity: 1;
+        transition: all 1s ease;
+    }
+    #g03:checked ~ #g03-content,
+    #n03:checked ~ #n03-content,
+    #m03:checked ~ #m03-content {
+        position: inherit;
+        display: block !important;
+        z-index: 1;
+        opacity: 1;
+        transition: all 1s ease;
+    }
+    #g17:checked ~ #g17-content,
+    #n17:checked ~ #n17-content,
+    #m17:checked ~ #m17-content{
+        position: inherit;
+        display: block !important;
+        z-index: 1;
+        opacity: 1;
+        transition: all 1s ease;
+    }
+    input:checked + .tab-item {
+        background-color: #B9B9B9;
+        color: white;
+        transition: all .3s ease;
+    }
+}
