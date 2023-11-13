@@ -61,8 +61,140 @@
 				}
 			}
 		}
+		&.-f01{
+			display: flex;
+			@include mq(sp){
+				flex-wrap: wrap;
+			}
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-between;
+			}
+			&.-center{
+				justify-content: center;
+			}
+			.flexItem{
+				width: 100%;
+				@include mq(tb){
+					width: 50%;
+				}
+				&--nTitleArea{
+					position: relative;
+					padding-left: 25%;
+					@include mq(tb){
+						padding-left: 25%;
+					}
+					&::after{
+						position: absolute;
+						top: 50%;
+						left: 0;
+						transform: translateY(-50%);
+
+						font-size: 17vw;
+						color: #C9CACA;
+						font-family: "garamond-premier-pro-display", serif;
+						font-weight: 400;
+						font-style: normal;
+						letter-spacing: 5px;
+						@include mq(tb){
+							font-size: 7vw;
+							font-style: italic;
+						}
+					}
+					&.-n01{
+						&::after{
+							content:"01";
+						}
+					}
+					&.-n02{
+						&::after{
+							content:"02";
+						}
+					}
+					&.-n03{
+						&::after{
+							content:"03";
+						}
+					}
+				}
+				&--text{
+					// @include mq(tb){
+					// 	padding: 0 10%;
+					// }
+					&:nth-child(1){
+						@include mq(tb){
+							width: 47%;
+						}
+					}
+				}
+			}
+			&.-mapArea{
+				@include mq(sp){
+					margin: 0 1vw;
+				}
+			}
+		}
+		&.-f03{
+			display: flex;
+			@include mq(sp){
+				flex-wrap: wrap;
+			}
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-between;
+			}
+			.flexItem{
+				width: 100%;
+				@include mq(tb){
+					width: 33.3333%;
+					margin: 0 10px;
+				}
+				&--text{
+					// @include mq(tb){
+					// 	padding: 0 10%;
+					// }
+					&:nth-child(1){
+						@include mq(tb){
+							width: 47%;
+						}
+					}
+				}
+			}
+		}
+		&.-f04{
+			display: flex;
+			@include mq(sp){
+				flex-wrap: wrap;
+			}
+			@include mq(tb){
+				flex-wrap: nowrap;
+				justify-content: space-between;
+			}
+			.flexItem{
+				width: 100%;
+				@include mq(tb){
+					width: 25%;
+					margin: 0 10px;
+				}
+				&--text{
+					// @include mq(tb){
+					// 	padding: 0 10%;
+					// }
+					&:nth-child(1){
+						@include mq(tb){
+							width: 47%;
+						}
+					}
+				}
+			}
+			&.-mapArea{
+				@include mq(sp){
+					margin: 0 1vw;
+				}
+			}
+		}
+
 		// header
-		
 		&.-header-top{
 			display: flex;
 			flex-wrap: nowrap;
@@ -409,9 +541,12 @@
 		}
 		&.-columnBox02{
 				display: flex;
-				flex-wrap: nowrap;
+				flex-wrap: wrap;
 				align-items: flex-start;
 				justify-content: space-around;
+				@include mq(tb){
+					flex-wrap: nowrap;
+				}
 				.flexItem{
 					width: 100%;
 					padding: 0 2%;

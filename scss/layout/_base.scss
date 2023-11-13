@@ -115,17 +115,23 @@ img{
 	margin: auto;
 }
 .w1200{
-	width: 80% !important;
+	width: 90% !important;
 	max-width: 1200px;
 	margin: auto;
+	@include mq(tb){
+		width: 65% !important;
+	}
 	&.-s100{
 		width: 100% !important;
 	}
 }
-.w1050{
-	width: 70% !important;
-	max-width: 1050px;
+.w1100{
+	width: 90% !important;
+	max-width: 1100px;
 	margin: auto;
+	@include mq(tb){
+		width: 60% !important;
+	}
 }
 .w1000{
 	width: 75% !important;
@@ -154,10 +160,11 @@ img{
 		margin: auto;
 	}
 }
-.tb-w95{
+.w95{
+	width: 90% !important;
+	margin: auto;
 	@include mq(tb){
 		width: 95% !important;
-		margin: auto;
 	}
 }
 
