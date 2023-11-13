@@ -132,6 +132,26 @@
 				}
 			}
 
+			// LOCATION > 
+			&.-pop{
+				@include mq(tb){
+					top: 0;
+					left: 0;
+					transform: translate(-50%, -50%);
+					width: 20%;
+				}
+			}
+			&.-l-content04_btn{
+				top: 95%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 80%;
+				@include mq(tb){
+					top: 90%;
+					width: 35%;
+				}
+			}
+
 
 			// TOP > 周辺環境 > 3駅
 			&.-stationArea{
