@@ -29,33 +29,13 @@
             height: auto;
         }
     }
-
-    // サムナイルスライダー
-    .tab-thum{
-            &.-Box44{
-                display: flex;
-                flex-wrap: wrap;
-                .slick-track {
-                    transform: unset !important;
-                }
-                .thumbnail-img{
-                    width: 23% !important;
-                    margin: 2px;
-                    background: black;
-                    overflow: hidden;
-                    img{
-                        opacity: .8;
-                    }
-                    &.slick-current{
-                        img{
-                            opacity: 1;
-                        }
-                    }
-                }
-            }
+    .freeplan-slider{
+        .slick-img{
+            margin: 0 10px;
+            border-radius: 10px;
+            overflow: hidden;
+        }
     }
-
-
 }
 
 

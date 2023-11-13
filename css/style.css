@@ -178,8 +178,14 @@ img {
   }
 }
 @media screen and (min-width: 767px) {
+  .w1200.-w95 {
+    width: 85% !important;
+    max-width: 1000px !important;
+  }
+}
+@media screen and (min-width: 767px) {
   .w1200.-w100 {
-    width: 100% !important;
+    width: 95% !important;
   }
 }
 @media screen and (max-width: 768px) {
@@ -922,6 +928,47 @@ img {
 @media screen and (min-width: 767px) {
   .l-contents.-img-bg .l-contentsBox.-layout-sliderArea {
     top: 45%;
+  }
+}
+.l-contents.-img-bg .l-contentsBox.-freeplan-sliderArea {
+  top: 59%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+@media screen and (min-width: 767px) {
+  .l-contents.-img-bg .l-contentsBox.-freeplan-sliderArea {
+    top: 62%;
+  }
+}
+@media screen and (min-width: 767px) {
+  .l-contents.-img-bg .l-contentsBox.-f-content02 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+}
+.l-contents.-img-bg .l-contentsBox.-f-content03_btn {
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+@media screen and (min-width: 767px) {
+  .l-contents.-img-bg .l-contentsBox.-f-content03_btn {
+    top: 87%;
+    width: 80%;
+  }
+}
+.l-contents.-img-bg .l-contentsBox.-f-content04_btn {
+  top: 92%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+}
+@media screen and (min-width: 767px) {
+  .l-contents.-img-bg .l-contentsBox.-f-content04_btn {
+    top: 95%;
+    width: 40%;
   }
 }
 .l-contents.-img-bg .l-contentsBox.-stationArea {
@@ -2791,24 +2838,10 @@ img {
   width: 100%;
   height: auto;
 }
-.l-slider .tab-thum.-Box44 {
-  display: flex;
-  flex-wrap: wrap;
-}
-.l-slider .tab-thum.-Box44 .slick-track {
-  transform: unset !important;
-}
-.l-slider .tab-thum.-Box44 .thumbnail-img {
-  width: 23% !important;
-  margin: 2px;
-  background: black;
+.l-slider .freeplan-slider .slick-img {
+  margin: 0 10px;
+  border-radius: 10px;
   overflow: hidden;
-}
-.l-slider .tab-thum.-Box44 .thumbnail-img img {
-  opacity: 0.8;
-}
-.l-slider .tab-thum.-Box44 .thumbnail-img.slick-current img {
-  opacity: 1;
 }
 
 .slide-arrow {

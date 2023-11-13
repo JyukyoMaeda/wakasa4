@@ -95,6 +95,43 @@
 				}
 			}
 
+			// FREEPLAN > スライダーコンテンツ
+			&.-freeplan-sliderArea{
+				top: 59%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				@include mq(tb){
+					top: 62%;
+				}
+			}
+			&.-f-content02{
+				@include mq(tb){
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+				}
+			}
+			&.-f-content03_btn{
+				top: 80%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 80%;
+				@include mq(tb){
+					top: 87%;
+					width: 80%;
+				}
+			}
+			&.-f-content04_btn{
+				top: 92%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				width: 80%;
+				@include mq(tb){
+					top: 95%;
+					width: 40%;
+				}
+			}
+
 
 			// TOP > 周辺環境 > 3駅
 			&.-stationArea{
