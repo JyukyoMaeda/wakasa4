@@ -85,6 +85,15 @@
 					transform: translateX(-50%);
 				}
 			}
+			// LAYOUT > スライダーコンテンツ
+			&.-layout-sliderArea{
+				top: 45%;
+				left: 50%;
+				transform: translate(-50%, -50%);
+				@include mq(tb){
+					top: 45%;
+				}
+			}
 
 
 			// TOP > 周辺環境 > 3駅

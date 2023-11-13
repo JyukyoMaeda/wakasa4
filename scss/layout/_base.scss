@@ -121,8 +121,15 @@ img{
 	@include mq(tb){
 		width: 65% !important;
 	}
-	&.-s100{
-		width: 100% !important;
+	&.-w100{
+		@include mq(tb){
+			width: 100% !important;
+		}
+	}
+	&.-w90_s{
+		@include mq(sp){
+			width: 90% !important;
+		}
 	}
 }
 .w1100{
