@@ -29,11 +29,18 @@
             height: auto;
         }
     }
+    .layout-slider,
     .freeplan-slider{
         .slick-img{
             margin: 0 10px;
             border-radius: 10px;
             overflow: hidden;
+        }
+    }
+    .layout-slider{
+        .slick-img{
+            margin: 0 10px 10px;
+            filter: drop-shadow(1px 2px 3px black);
         }
     }
 }

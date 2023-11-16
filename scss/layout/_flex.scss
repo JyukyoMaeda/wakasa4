@@ -242,16 +242,35 @@
 					@include mq(tb){
 						width: calc(55%);
 						padding: 0;
+						margin-top: -2vh;
+					}
+					@include mq(tb-pc1000){
+						margin-top: -5vh;
+					}
+					@include mq(tb-pc1400){
+						margin-top: -5vh;
 					}
 					@include mq(pc){
 						width: 60%;
-						margin: auto;
+						margin: 0 auto auto;
 						// margin:auto 0.7% auto auto;
 					}
 				}
 				&.-right-contactArea{
 					width: calc(20%);
 					margin-right: auto;
+					@include mq(tb){
+						margin-top: -3vh;
+					}
+					@include mq(tb-pc1000){
+						margin-top: -4vh;
+					}
+					@include mq(tb-pc1400){
+						margin-top: -5vh;
+					}
+					@include mq(pc){
+						margin-top: -4vh;
+					}
 					p{
 						margin-top: .5vh;
 					}

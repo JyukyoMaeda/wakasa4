@@ -1,4 +1,11 @@
 /* モーダルCSS */
+
+#colorbox{
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
+
 .l-modal--area {
     display: none;
     position: fixed;
@@ -58,13 +65,11 @@
 
 .inline_modal {
     display:none;
-    width: 80% !important;
-}
-.modal-Item{
-    img{
-        margin: auto;
-        @include mq(tb){
-            width: 100%;
+    .modalItem{
+        img{
+            @include mq(tb){
+                // width: 75%;
+            }
         }
     }
 }
@@ -120,4 +125,3 @@
         transform: translate(-50%,-50%) rotate(-45deg);
     }
 }
-

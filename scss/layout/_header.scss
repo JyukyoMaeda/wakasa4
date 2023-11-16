@@ -17,10 +17,14 @@
             margin-top: -2vh;
         }
         @include mq(tb-pc1000){
-            margin-top: -3vh;
+            margin-top: -5vh;
+        }
+        @include mq(tb-pc1400){
+            margin-top: -5vh;
         }
         @include mq(pc){
-            margin-top: -4vh;
+            margin-top: -7vh;
+            // margin-top: -4vh;
         }
         &__inner{
             width: 76%;
