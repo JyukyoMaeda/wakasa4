@@ -744,3 +744,52 @@
 		}
 	}
 }
+
+
+
+.-border{
+    width: auto;
+    position: relative;
+    z-index: 2;
+    &::after{
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 92%;
+        max-width: 1200px;
+        height: .1vh;
+        background: black;
+
+        z-index: -1;
+        @include mq(tb){
+            width: 60%;
+        }
+        @include mq(tb-pc1400){
+            width: 80%;
+        }
+    }
+    &-w{
+        width: 100%;
+        position: relative;
+        z-index: 2;
+        &::after{
+            content: "";
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+            max-width: 1200px;
+            height: .1vh;
+            background: black;
+        }
+        // @include mq(tb){
+        //     width: 60%;
+        // }
+        // @include mq(tb-pc1400){
+        //     width: 80%;
+        // }
+    }
+}

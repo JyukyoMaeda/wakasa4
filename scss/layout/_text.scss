@@ -332,7 +332,16 @@
         font-weight: 600;
         font-style: normal;
     }
-
+    &.-family02{// リュウミン
+        font-family: "a-otf-ryumin-pr6n", serif;
+        font-weight: 300;
+        font-style: normal;
+    }
+    &.-family04{//garamond
+        font-family: "garamond-premier-pro-display", serif;
+        font-weight: 400;
+        font-style: normal;
+    }
 
     &.-freeDesign{
         background: white;

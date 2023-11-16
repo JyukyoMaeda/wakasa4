@@ -1,5 +1,8 @@
 body.lb-disable-scrolling {
-    overflow: hidden;
+    overflow-Y: hidden;
+    @include mq(tb){
+      overflow-Y: scroll;
+    }
   }
   
   .lightboxOverlay {
@@ -15,7 +18,10 @@ body.lb-disable-scrolling {
   
   .lightbox {
     position: absolute;
+    top: 0;
+    // top: 10% !important;
     left: 0;
+    // transform: translateY(-50%) !important;
     width: 100%;
     z-index: 10000;
     text-align: center;
